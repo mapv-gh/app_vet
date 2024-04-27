@@ -73,7 +73,6 @@ class _AddPacientePageState extends State<AddPacientePage> {
               CampoTexto(
                 controller: edadController,
                 labelText: 'Edad',
-                keyboardType: TextInputType.number,
               ),
               Container(
                 width: screenSize.width,
