@@ -19,7 +19,7 @@ class _PacientesPageState extends State<PacientesPage> {
   final FichaProvider _fichaProvider = FichaProvider();
   late List<Ficha> _allFichas = [];
   bool _isLoading = false;
-  final scrollController = ScrollController();
+  late final ScrollController scrollController = ScrollController();
   int page = 1;
   final int perPage = 10;
 
@@ -158,7 +158,7 @@ class _PacientesPageState extends State<PacientesPage> {
           Expanded(
             child: ListView.builder(
               controller: scrollController,
-              itemCount: _allFichas.length + (_isLoading ? 1 : 0),
+              itemCount: _allFichas.length,
               itemBuilder: (context, index) {
                 if (_allFichas.isNotEmpty) {
                   final Ficha ficha = _allFichas[index];

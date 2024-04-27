@@ -102,7 +102,7 @@ class _ClientesPageState extends State<ClientesPage> {
           ),
           Expanded(
             child: ListView.builder(
-                itemCount: _allTutores.length + (_isLoading ? 1 : 0),
+                itemCount: _allTutores.length,
                 controller: _scrollController,
                 itemBuilder: (context, index) {
                   if (_allTutores.isNotEmpty) {

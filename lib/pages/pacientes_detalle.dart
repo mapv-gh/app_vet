@@ -57,13 +57,14 @@ class _DetallePacienteState extends State<DetallePaciente> {
           Container(
             padding: const EdgeInsets.all(10),
             child: IconButton(
-              onPressed: () => {
-                Navigator.push(
+              onPressed: () async {
+                await Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
                           AddComentario(idFicha: widget.ficha.idFicha)),
-                )
+                );
+                setState(() {});
               },
               icon: Icon(MdiIcons.plus),
               iconSize: 30,
